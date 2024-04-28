@@ -63,40 +63,29 @@ const rules: KarabinerRules[] = [
     b: {
       t: open("https://twitter.com"),
       // Quarterly "P"lan
-      p: open("https://qrtr.ly/plan"),
       y: open("https://news.ycombinator.com"),
       f: open("https://facebook.com"),
       r: open("https://reddit.com"),
     },
     // o = "Open" applications
     o: {
-      1: app("1Password"),
-      g: app("Google Chrome"),
+      1: app("NordPass"),
+      a: app("Arc"),
       c: app("Notion Calendar"),
       v: app("Visual Studio Code"),
       d: app("Discord"),
       s: app("Slack"),
-      e: app("Superhuman"),
       n: app("Notion"),
-      t: app("Warp"),
       // Open todo list managed via *H*ypersonic
-      h: open(
-        "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
-      ),
-      z: app("zoom.us"),
+      t: open("notion://www.notion.so/1cfc97656cbf4f928c74ca1784a6eb25"),
       // "M"essages
-      m: app("Texts"),
+      m: app("Spotify"),
       f: app("Finder"),
-      r: app("Texts"),
       // "i"Message
-      i: app("Texts"),
+      i: app("iMessage"),
       p: app("Spotify"),
-      a: app("iA Presenter"),
-      // "W"hatsApp has been replaced by Texts
-      w: open("Texts"),
-      l: open(
-        "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
-      ),
+      u: open("Click Up"),
+      w: open("Whats App"),
     },
 
     // w = "Window" via rectangle.app
@@ -117,6 +106,8 @@ const rules: KarabinerRules[] = [
       h: rectangle("left-half"),
       l: rectangle("right-half"),
       f: rectangle("maximize"),
+      hyphen: rectangle("smaller"),
+      equal_sign: rectangle("larger"),
       u: {
         description: "Window: Previous Tab",
         to: [
@@ -303,25 +294,16 @@ const rules: KarabinerRules[] = [
 
     // r = "Raycast"
     r: {
-      n: open("raycast://script-commands/dismiss-notifications"),
-      l: open(
-        "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
-      ),
       e: open(
         "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
       ),
-      c: open("raycast://extensions/raycast/system/open-camera"),
       p: open("raycast://extensions/raycast/raycast/confetti"),
       a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-      s: open("raycast://extensions/peduarte/silent-mention/index"),
       h: open(
         "raycast://extensions/raycast/clipboard-history/clipboard-history"
       ),
-      1: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
-      ),
-      2: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
+      t: open(
+        "raycast://extensions/HenriChabrand/notion/create-database-page?launchContext=%7B%22database%22%3A%221cfc9765-6cbf-4f92-8c74-ca1784a6eb25%22%2C%22property%3A%3Astatus%3A%3Anotion%253A%252F%252Ftasks%252Fstatus_property%22%3A%22not-started%22%7D"
       ),
     },
   }),
@@ -336,7 +318,7 @@ fs.writeFileSync(
       },
       profiles: [
         {
-          name: "Default",
+          name: "Tatu",
           complex_modifications: {
             rules,
           },
